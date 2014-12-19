@@ -47,3 +47,25 @@ cacheSolve <- function(x, ...) {
     x$setInverse(rv)
     rv
 }
+
+# ######## Test code ########
+# 
+# set.seed(83)
+# m <- matrix(sample.int(100,size=4,replace=TRUE), nrow=2)
+# print("m")
+# print(m)
+# mCached <- makeCacheMatrix(m)
+# mInv1 <- cacheSolve(mCached)
+# print("mInv1")
+# print(mInv1)
+# mInv2 <- cacheSolve(mCached)
+# print("mInv2")
+# print(mInv2)
+# prodM1 <- m %*% mInv1
+# print("m %*% mInv1")
+# print(prodM1)
+# prodM2 <- m %*% mInv2
+# print("m %*% mInv2")
+# print(prodM2)
+# 
+# ############################
